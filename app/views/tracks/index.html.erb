@@ -1,0 +1,46 @@
+<div ng-app="tracksApp">
+
+  <div ng-controller="tracksCtrl" class="container">
+
+    <h1> All Tracks </h1>
+
+    <p class="text-center rocket"> <%= flash[:forked] if flash[:forked]%></p>
+
+
+
+    <p></p>
+
+    <div id="search_tools">
+      <% if current_user %>
+        <%= link_to "Create a New Track", categories_path, :class => "btn btn-primary create_btn" %>
+      <% end%>
+
+      <button class="btn btn-primary sort_btn" ng-click="updateSort('creation')"> Most Recent </button>
+      <button class="btn btn-primary sort_btn" ng-click="updateSort('-popularity')"> Most popular </button>
+      <input ng-model="search" class="search form-control" placeholder="Search by name, category, user" style="width:20%">
+    </div>
+
+    <div class="row">
+
+      <div ng-repeat="track in tracks | filter:search | orderBy: sort" class="col-xs-6 col-md-12 thumbnail track_box">
+
+        <a href="/tracks/{{track.id}}"> {{track.name}}</a><span class="cat_name">{{track.category.name}}</span>
+
+        <div class="user_track">
+          by
+          <a href="/users/{{track.user.id}}"> {{track.user.username}}</a>
+        </div>
+
+        <span class="pull-right">
+          <a href="/tracks/{{track.id}}/follow" rel="nofollow" data-method="post" class="btn btn-success">Join</a>
+          <span class="badge">{{track.popularity}} Users</span>
+
+        </span>
+
+
+      <p class="description"> {{track.resume}}</p>
+
+      </div>
+    </div>
+  </div>
+</div>

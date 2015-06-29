@@ -1,0 +1,50 @@
+<h2><%= "#{@user.name.capitalize}'s tracks" %></h2>
+
+
+<div class="row">
+
+  <%@user.tracks.each do |track|%>
+
+    <div class="col-xs-12 col-md-12 track_prog">
+      <%progress = @user.progress(track.id).to_i%>
+      <h4><%= link_to "#{track.name}", track_path(track.id) %> (<%=progress%>%)</h4>
+      <i> <%= track.description%></i>
+
+      <div class="progress">
+        <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: <%=progress%>%;">
+        </div>
+      </div>
+
+      <div class="tree">
+
+        <% if track.children.length > 0 %>
+         <a class="show_fork" href="#"> Show the fork tree</a>
+          <ul style="display:none">
+            <li>
+              <h4 style="text-align: center">Forks</h4>
+
+              <ul>
+                <% track.children.each do |child| %>
+
+
+                    <%=render partial: "child_partial", locals: {child: child} %>
+
+                        <% if child.children.length > 0%>
+                          <ul>
+                            <% child.children.each do |grandchild| %>
+                              <%= render partial: "child_partial", locals: {child: grandchild} %></li>
+                            <%end%>
+
+                          </ul>
+                      </li>
+                        <%end%>
+                      </li>
+                <%end%>
+              </ul>
+            </li>
+          </ul>
+        <% end %>
+      </div>
+    </div>
+  <%end%>
+</div>

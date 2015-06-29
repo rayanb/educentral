@@ -1,0 +1,18 @@
+<h1><%= @category.name %></h1>
+
+Courses
+<ul>
+  <% @courses.each do |course| %>
+    <li><%=link_to course.name, course.url, :target => '_blank'%></li>
+  <%end%>
+</ul>
+
+Tracks
+<%= link_to "New Track", new_category_track_path(@category.id), :class => "btn btn-default" %>
+<ul>
+  <% @tracks.each do |track| %>
+    <li><%=link_to track.name, track %></li>
+    <%= track.owner.username%>
+  <%end%>
+</ul>
+

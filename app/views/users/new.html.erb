@@ -1,0 +1,13 @@
+<%= form_for @user, :html => {:class => "form-signin"}  do |f| %>
+	<h2>Sign Up Form</h2>
+	<%= f.label :username, nil, :class => "sr-only" %>
+	<%= f.text_field :username, :class => "form-control no-bottom-radius", :placeholder => "Username" %>
+	<%= f.label :email, nil, :class => "sr-only" %>
+	<%= f.text_field :email, :class => "form-control no-top-radius", :placeholder => "Example@example.com" %>
+	<%= f.label :password, nil, :class => "sr-only" %>
+	<p></p>
+	<%= f.password_field :password, :class => "form-control no-bottom-radius", :placeholder => "Password" %>
+	<%= f.label :password_confirmation, nil, :class => "sr-only" %>
+	<%= f.password_field :password_confirmation, :class => "form-control no-top-radius", :placeholder => "Password Confirmation" %>
+	<%= f.submit nil, :class => "btn btn-primary center-block" %>
+<% end %>

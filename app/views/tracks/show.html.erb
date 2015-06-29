@@ -1,0 +1,50 @@
+<div class="container container-fit" ng-app="tracksApp">
+  <div class="row">
+    <!-- Part 1 -->
+    <div class="col-xs-6 col-md-6 track-left remove-right-radius" style="background-color: <%=@track.category.color%>">
+      <h3><%=@track.category.name%></h3>
+      <h1><%= @track.name%></h1>
+      <p><%= @track.description%> </p>
+
+      <% if @owner %>
+        <i> forked from <%=link_to @owner.name, @owner%>, taken by <%=@count%> users </i>
+      <% else %>
+        <i> by <%=@track.owner.name%>, taken by <%=@count%> users </i>
+      <%end%>
+
+      </br>
+      </br>
+
+      <% if current_user && @track.user_id == current_user.id %>
+        <%= link_to ("<i class='fa fa-pencil-square-o'></i> Edit").html_safe, edit_track_path, :class => "btn btn-default" %>
+      <%else%>
+<!--         <%= link_to ("<i class='fa fa-code-fork'></i> Fork").html_safe, "/tracks/#{@track.id}/fork", method: 'post', :class => "btn btn-default" %> -->
+
+        <%= link_to ("<i class='fa fa-users'></i> Follow").html_safe, "/tracks/#{@track.id}/follow", method: 'post', :class => "btn btn-default" %>
+      <%end%>
+
+
+    </div>
+
+    <div class="col-xs-6 col-md-6 pad-left-0" ng-controller="coursesCtrl">
+      <div class="row">
+        <div class="col-xs-12 col-md-12 thumbnail remove-left-radius track-right">
+
+          <div class="text-center"><h1>Progress Stats <i class="fa fa-line-chart"></i></h1>
+            <h4>
+              <span class="right-block"><%= current_user.completed(@track.id) %></span> <span class="right-block">/ {{courses.length}} Courses</span>
+            </h4>
+          </div>
+
+          <div class="col-xs-12 col-md-b12" ng-repeat="course in courses">
+            <%= render partial: 'courses/show'%>
+            <%= render partial: 'reviews/new' %>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+

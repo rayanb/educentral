@@ -1,0 +1,35 @@
+<div class="container">
+
+  <div id="row_course_selection"  class="row">
+  <% @checked_courses.each do |course| %>
+
+    <%= render partial: "courses/course_grid", locals: {course: course} %>
+
+  <% end %>
+
+  </div>
+
+  <div id="sidebar_course_choices" class="sidebar">
+   <% @all_courses.each do |course| %>
+       <%= render partial: "courses/course_sidebar", locals: {course: course} %>
+   <% end %>
+
+
+  </div>
+
+</div>
+
+<%= form_tag track_path(@track.id), method: 'put', :class => "track_drag form-group edit_track" do %>
+  <%= text_field_tag(:title , @track.name, :class=>'form-control')%>
+  <%= text_area_tag(:description, @track.description,placeholder: 'Description', :class=> 'form-control')%>
+    <% @checked_courses.each do |course| %>
+      <%= check_box_tag("course[#{course.id}]", course.id, checked=true)%>
+      <%= label_tag("course[#{course.id}]", course.name)%>
+    <%end%>
+     <% @all_courses.each do |course| %>
+      <%= check_box_tag("course[#{course.id}]", course.id)%>
+      <%= label_tag("course[#{course.id}]", course.name)%>
+    <%end%>
+    <%= hidden_field_tag(:order)%>
+  <%= submit_tag 'Edit your Track', :class=> 'btn btn-success form-control' %>
+<%end%>

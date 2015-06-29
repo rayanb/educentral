@@ -1,0 +1,17 @@
+<form action="{{reviewUrl(course)}}" method="POST">
+   <div id="modal{{course.id}}" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+     <div class="modal-dialog modal-sm">
+       <div class="modal-content">
+         <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+         <%= label_tag "Add Review" %> </br>
+         <%= label_tag "Difficulty: " %>
+         <%= select_tag "difficulty", options_for_select([*1..5], "") %>
+         <%= label_tag "Rating: " %>
+         <%= select_tag "rating", options_for_select([*1..5], "") %>
+         <%= hidden_field_tag  :user_id, current_user.id %>
+         <%= submit_tag nil, :class => 'btn btn-success' %>
+       </div>
+     </div>
+   </div>
+</form>
+

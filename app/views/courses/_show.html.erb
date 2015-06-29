@@ -1,0 +1,13 @@
+<div class="row track_courses">
+  <div class="check_function col-xs-3" ng-click="check(course)">
+    <div data-id="{{course.id}}" draggable="false" class="{{course.checked}} center-block">
+      <i class="fa fa-check check"></i>
+    </div>
+  </div>
+  <div class="col-xs-9 course-box">
+    <a class="course-box-anchor" href="{{course.url}}" target="_blank"> <p style="margin-bottom: 0;height:25px; overflow:hidden"> {{course.name}}</p>
+      <div><img src="{{course.platform.logo_url}}" style="width:35%"></div>
+      <div class="ratings" ng-bind-html="course.ratingsView"></div>
+    </a>
+  </div>
+</div>

@@ -19,11 +19,9 @@
 //= require jquery-ui/sortable
 //= require bootstrap.min
 //= require bootstrap/modal
-//= scripts/tracks_draggable
-//= scripts/course_model
-//= scripts/track_model
-//= tracks
-//= require_tree ./angular-app/templates
+//= require scripts/tracks_draggable
+//= require scripts/course_model
+//= require scripts/track_model
 //= require_tree ./angular-app/modules
 //= require_tree ./angular-app/services
 //= require_tree ./angular-app/controllers/tracks_controllers

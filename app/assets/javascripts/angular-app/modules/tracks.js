@@ -1,8 +1,7 @@
 var Tracks = angular.module('tracksApp', [])
 
+Tracks.config(function($httpProvider) {
+  token = $("meta[name=\"csrf-token\"]").attr("content");
+  $httpProvider.defaults.headers.common['X-CSRF-TOKEN'] = token;
+});
 
-// Headers for rails
-Tracks.run(['$http', function($http) {
-  $http.defaults.headers.common['Accept'] = 'application/json';
-  $http.defaults.headers.common['Content-Type'] = 'application/json';
-}]);

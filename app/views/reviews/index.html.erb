@@ -1,0 +1,9 @@
+<h1>Reviews for '<%= @course.name %>'</h1>
+<ul>
+<% @reviews.each do |review| %>
+    <li><%= "Review by #{review.user.username} Difficulty: #{review.difficulty} Rating: #{review.rating}" %></li>
+<% end %>
+
+<%= render partial: "new", locals: {course: @course, review: @review} %>
+  
+</ul>
