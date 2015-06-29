@@ -1,0 +1,92 @@
+html{
+  background-color: #eee;
+}
+
+.track_drag input[type='checkbox'], .track_drag label { display: none; }
+
+#row_course_selection li, .sidebar li {
+  list-style-type: none; margin: 0; padding: 0;   min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+#row_course_selection {
+  padding-top: 20px;
+  float: left;
+  background: none;
+  width: 75%;
+  overflow: hidden;
+  z-index: -100;
+  background-color: #ecf0f1  ;
+}
+
+.sidebar {
+  width: 200px;
+  left: 3em;
+  bottom: 2em;
+  position: relative;
+  border: grey solid 1px;
+  border-radius: 5px;
+  float: left;
+  background: none;
+  padding-top: 20px;
+  margin-bottom: -101%;
+  padding-bottom: 101%;
+  margin-top: 1em;
+  max-height: 10em !important;
+  z-index: 1;
+
+}
+/*.container {overflow: hidden;}*/
+
+#row_course_selection {
+  padding-right:20px;
+  border: #ddd solid 1px;
+  border-radius: 5px;
+  margin-top: 1em;
+  min-height: 20em;
+}
+
+.course_box {
+  height: 10em;
+  width: 12em;
+  background-color:white !important
+;
+  border-top: 2px solid #95A5A6 !important;
+  border-bottom: 5px solid #c0392b !important;
+  border-left: 2px solid #7F8C8D !important;
+  border-right: 5px solid #95A5A6 !important;
+  overflow: hidden;
+}
+
+.course_in_form{
+  position:relative;
+  z-index: 2;
+}
+
+.icon_course{
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0.9;
+    margin-right: 10px;
+
+}
+
+
+.icon_course{
+  z-index:0;
+  width: 80%;
+  bottom:2em;
+  margin-left: 3em !important;
+}
+
+.ratings {
+  position:absolute;
+  margin-bottom: 20px;
+  padding-bottom: 0;
+  z-index: 1000;
+  color: #2c3e50;
+}

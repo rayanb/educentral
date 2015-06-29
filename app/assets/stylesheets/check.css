@@ -1,0 +1,69 @@
+
+
+.checked_on {
+  border-radius: 100%;
+  background: grey;
+  height: 4em;
+  width: 4em;
+
+  background-image: -webkit-gradient(
+    linear, left top, left bottom, from(rgba(50,50,50,0.8)),
+    to(rgba(80,80,80,0.2)), color-stop(1,#333333)
+    );
+
+  background-image: -moz-linear-gradient(
+    rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 95%
+    );
+}
+
+.checked_on:hover {
+
+  background-image: -webkit-gradient(
+    linear, left top, left bottom, from(rgba(5,50,50,0.8)),
+    to(rgba(80,80,80,0.2)), color-stop(.5,#333333)
+    );
+
+  background-image: -moz-linear-gradient(
+    rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 95%
+    );
+}
+
+
+.checked_on:active {
+
+  background-image: -webkit-gradient(
+    linear, left top, left bottom, from(rgba(5,50,50,0.8)),
+    to(rgba(255,80,80,0.2)), color-stop(.5,#333333)
+    );
+
+  background-image: -moz-linear-gradient(
+    rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 95%
+    );
+}
+
+
+
+.check {
+  color: white;
+  position: relative !important;
+  left: .33em !important;
+  top: .33em !important;
+  font-size: 2.5em !important;
+}
+
+
+.checked_off {
+  border-radius: 100%;
+  background: green;
+  height: 4em;
+  width: 4em;
+
+  background-image: -webkit-gradient(
+    linear, left top, left bottom, from(#2ecc71),
+    to(#10ae60), color-stop(1,#333333)
+    );
+
+  background-image: -moz-linear-gradient(
+    rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 95%
+    );
+}

@@ -1,0 +1,22 @@
+.edit_track{
+  margin-top: -2em !important;
+}
+
+.track_courses{
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 1em !important;
+  padding-bottom: 1em !important;
+  border: none !important;
+  border-top: 1px solid lightgrey !important;
+  border-radius: none !important;
+}
+
+.track_courses:hover{
+  background-color:#ecf0f1 !important;
+  padding-bottom: 10px;
+}
+
+.pad-left-0 {
+  padding-left: 0 !important;
+}

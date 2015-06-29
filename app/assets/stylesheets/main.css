@@ -1,0 +1,102 @@
+
+.rocket {
+  color: #e74c3c;
+}
+.star {
+  color: #f1c40f;
+}
+
+body {
+  background: linear-gradient(to right, #ffffff 0%,#f1f1f1 38%,#f6f6f6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=1 );
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 740px;
+
+
+}
+
+.dropdown-toggle:focus, .dropdown-toggle:hover {
+  background: #2c3e50 !important;
+}
+.dropdown-menu {
+  background: #2c3e50 !important;
+}
+
+.dropdown-menu a:hover {
+  background: grey !important;
+}
+
+.logo {
+  width: 10em;
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+
+.modal-content {
+  /*margin: 5em;*/
+  padding: 1em;
+  width: 300px !important;
+}
+
+.select_cat{
+  margin-top: 3em;
+  height: 29.5em !important;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.row {
+  margin: 0px 0px 0px !important;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+.track-left {
+  color: white !important;
+  height:40em;
+  border-radius: 5px;
+  padding-right: 2em;
+
+}
+
+.container-fit {
+  width: 1140px !important;
+}
+
+.track_courses {
+ padding: 20px !important;
+ margin: 10px !important;
+ font-size: 21px !important;
+ font-weight: bold !important;
+ line-height: 1.3em !important;
+ font-weight: normal !important;
+}
+
+.remove-left-radius {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+
+}
+
+.remove-right-radius {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.track-right {
+  overflow: scroll;
+    height:40em;
+
+}
+
+
+#search_tools a {
+  background-color: red !important;
+}
+
+.course-box{
+  margin-bottom: 0.2em;
+}
