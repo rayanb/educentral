@@ -21,7 +21,7 @@ end
    post '/fork', :to => 'tracks#fork'
  end
 
-  get 'auth/:provider/callback', to: 'sessions#create'
+  get 'auth/google_oauth2/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/')
   get 'signout', to: 'sessions#destroy', as: 'signout'
 
