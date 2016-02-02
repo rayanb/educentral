@@ -23,7 +23,7 @@ class TracksController < ApplicationController
 
   def new
     @category = cat
-    @courses  = cat.courses.includes(:reviews, :platform).all
+    @courses  = @category.courses.includes(:reviews, :platform).all
   end
 
   def new_json

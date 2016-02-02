@@ -100,3 +100,8 @@ body {
 .course-box{
   margin-bottom: 0.2em;
 }
+
+
+.course_title{
+  z-index:20000;
+}
