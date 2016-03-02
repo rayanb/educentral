@@ -21,7 +21,8 @@
           <div class="course_in_form"><img class="logo center-block" src="{{course.platform.logo_url}}" alt=""></div>
           <div class="course_title"><a href="{{course.url}}" target="_blank">{{course.name}}</a></div>
 
-          <div class="ratings" ng-bind-html="course.ratingsView"></div>
+          <div class="ratings" ng-bind-html="course.ratingsView" style="
+    margin-top: 5px"></div>
           <img class="icon_course" src="{{course.photo_url}}">
 
       </li>
