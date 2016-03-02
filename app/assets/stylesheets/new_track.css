@@ -2,6 +2,10 @@ html{
   background-color: #eee;
 }
 
+body {
+  overflow: hidden;
+}
+
 .track_drag input[type='checkbox'], .track_drag label { display: none; }
 
 #row_course_selection li, .sidebar li {
